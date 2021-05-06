@@ -1,0 +1,26 @@
+-- Datos eps
+copy eps(id, nombre_eps)
+from '<<ruta>>\tabla_eps.csv'
+delimiter ';'
+csv header;
+
+-- Datos rol_victima
+copy rol_victima(id, nombre)
+from '<<ruta>>\tabla_rol.csv'
+delimiter ';'
+csv header;
+
+-- Datos tipo_vehiculo
+copy tipo_vehiculo(id, nombre)
+from '<<ruta>>\tabla_vehiculo.csv'
+delimiter ';'
+csv header;
+
+-- Datos accidente
+copy accidente_victima(numero, edad, grupo_etario, curso_de_vida, sexo, fecha_accidente, hora_accidente,
+dia_accidente, dia_semana_accidente, mes_accidente, anio_accidente, requerimiento_cirugia, referido_otra_ips,
+condicion_egreso, costos, fecha_ingreso_ips, hora_ingreso_ips, dia_ingreso_ips, dia_semana_ingreso_ips,
+mes_ingreso_ips, anio_ingreso_ips, id_tipo_vehiculo, id_eps, id_rol_victima)
+from '<<ruta>>\tabla_accidente_v2.csv'
+delimiter ';'
+csv header;
