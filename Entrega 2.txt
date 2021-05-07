@@ -1,0 +1,16 @@
+--costos totales
+select sum(acc.costos)
+from accidente_victima acc
+--numero de victimas por eps
+select count(eps.nombre_eps) as victimas_eps
+from eps eps
+group by eps.nombre_eps
+order by victimas_esp desc
+--cantidad de hombres accidentados
+select count(acc.numero) as cantidad_accidente_H
+from accidente_victima acc
+where acc.sexo = 'MASCULINO'
+--cantidad de mujeres accidentados
+select count(acc.numero) as cantidad_accidente_M
+from accidente_victima acc
+where acc.sexo = 'FEMENINO'
